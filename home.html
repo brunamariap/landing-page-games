@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mind Masters Challenge</title>
+        <link rel="stylesheet" href="css/styes.css">
+        <link rel="shortcut icon" href="img/brain.svg" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <a href="/home.html">
+                    <img src="img/logo_dark.svg" alt="Logo da competição" class="logo_header">
+                </a>
+
+                <div class="navbar_links">
+                    <a href="/home.html" class="navbar_link">Home</a>
+                    <a href="/home.html#about" class="navbar_link">Sobre</a>
+                </div>
+
+                <a href="/home.html#register" class="navbar_link">
+                    Inscreva-se
+                </a>
+            </nav>
+        </header>
+
+        <main class="container main">
+            <section class="container init">
+                <article class="init_description">
+                    <h1>Junte-se a milhares de
+                        jogadores para testar
+                        seu racioncínio.</h1>
+                    <p>Se você ama desafios que estimulam o pensamento estratégico, lógico e criativo, este evento é
+                        perfeito para você.</p>
+                </article>
+
+                <img src="img/person_games.svg" alt="Personagens jogando" class="lottie_img">
+            </section>
+
+            <section class="container_bg_color">
+                <article id="about" class="container">
+                    <img src="img/logo_dark.svg" alt="Logo da competição" class="logo_about">
+                    <div class="description">
+                        <h1>Sobre o evento</h1>
+                        <span>Com previsão de 6 horas de duração.</span>
+                        <p>
+                            Este evento é aberto a jogadores de todas as idades e níveis de habilidade.
+                            Competiremos em uma variedade de jogos de raciocínio populares, incluindo
+                            enigmas e desafios lógicos.
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="container challenge">
+                <div class="hour_container">
+                    <div>
+                        <h2 class="hour_title">Conte cada segundo até o evento</h2>
+                    </div>
+
+                    <div class="countdown" id="countdown">
+                        <div>
+                            <p>Dias</p>
+                            <div id="days"></div>
+                        </div>
+
+                        <div>
+                            <p>Horas</p>
+                            <div id="hours"></div>
+                        </div>
+
+                        <div>
+                            <p>Minutos</p>
+                            <div id="minutes"></div>
+                        </div>
+
+                        <div>
+                            <p>Segundos</p>
+                            <div id="seconds"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <article>
+                        <h1>Desafios</h1>
+                        <p>Competiremos em uma variedade de jogos de raciocínio populares, incluindo enigmas e desafios
+                            lógicos.</p>
+                    </article>
+
+                    <img src="img/cube.svg" alt="Cubo" class="cube_img">
+                </div>
+            </section>
+
+            <section class="container_bg_color awards_container">
+                <h1>Prêmios concedidos</h1>
+
+                <div class="awards">
+                    <div>
+                        <img src="img/certificate_icon.svg" alt="Ícone de certificado">
+                        <p>Certificados</p>
+                    </div>
+
+                    <div>
+                        <img src="img/trophy_icon.svg" alt="Ícone de troféu">
+                        <p>Troféus</p>
+                    </div>
+
+                    <div>
+                        <img src="img/money_icon.svg" alt="Ícone de cifrão">
+                        <p>Dinheiro</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="register" class="container register_area">
+                <form action="" class="register_form" autocomplete="off">
+                    <fieldset>
+                        <h1>Formulário de inscrição</h1>
+                        <p>Preencha todos os campos abaixo para poder participar da competição.
+                            Após preencher o formulário, aguarde nossa confirmação por e-mail com mais informações
+                            sobre
+                            o
+                            evento, incluindo as instruções de acesso e os jogos específicos que serão jogados.</p>
+                    </fieldset>
+
+                    <fieldset class="fields">
+                        <div>
+                            <label for="name">Nome:</label>
+                            <input type="text" placeholder="Digite seu nome" name="name">
+                        </div>
+
+                        <div>
+                            <label for="email">E-mail:</label>
+                            <input type="email" placeholder="Digite seu e-mail" name="email">
+                        </div>
+
+                        <div>
+                            <label for="game">Jogo</label>
+                            <select name="game" id="game">
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="Candy Crush Saga">Candy Crush Saga</option>
+                                <option value="Sudoku">Sudoku</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="password">Senha:</label>
+                            <input type="password" placeholder="Digite sua senha" name="password">
+                        </div>
+                    </fieldset>
+
+                    <button class="btn">
+                        Inscrever-se
+                    </button>
+                </form>
+
+                <img src="img/person2.svg" alt="Pessoa jogando" class="register_img">
+            </section>
+        </main>
+
+        <footer class="container footer">
+            <div class="footer_links">
+                <a href="home.html">
+                    <img src="img/logo_white.svg" alt="Logo da competição" class="logo_footer">
+                </a>
+
+                <div>
+                    <a href="">
+                        <img src="img/whatsapp_logo.svg" alt="Logo do WhatsApp"
+                            style="background-color: green; border-radius: 10px; padding: 10px;">
+                    </a>
+                </div>
+            </div>
+
+            <p>Copyright © Todos os direitos reservados</p>
+        </footer>
+
+        <script src="js/countdown.js"></script>
+    </body>
+
+</html>
