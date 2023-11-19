@@ -9,13 +9,14 @@
 }
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     color: var(--black);
+    /* width: auto; */
 }
 
 a {
@@ -23,11 +24,16 @@ a {
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     color: var(--dark);
     margin: 0;
     margin-bottom: 0.2em;
     font-weight: 900;
+}
+
+li {
+    list-style: none;
+    display: inline;
 }
 
 fieldset {
@@ -39,26 +45,35 @@ label {
     font-weight: 600;
 }
 
-input, 
+input {
+    width: 34em;
+}
+
+input,
 select {
     background-color: var(--light-gray);
     display: block;
     margin-top: 0.5em;
-    width: 36em;
     border: none;
     border-bottom: 2px solid #D3D3D3;
     height: 3em;
     outline: none;
-    padding-left: 1em;
+    padding: 0 1em;
 }
 
 select {
+    width: 36em;
     cursor: pointer;
 }
 
 input:focus {
     border-bottom: 2px solid var(--dark);
     transition: linear 0.5s;
+}
+
+select option:checked {
+    color: blue;
+    background-color: red;
 }
 
 .container {
@@ -71,6 +86,7 @@ input:focus {
 .challenge {
     justify-content: space-around;
     width: 85%;
+    row-gap: 3em;
 }
 
 .header,
@@ -93,13 +109,31 @@ input:focus {
 
 .navbar_links {
     display: flex;
-    gap: 2em;
 }
 
 .navbar_link {
     color: var(--dark);
     font-weight: 700;
     font-size: 1.2em;
+    padding: 1em;
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid var(--dark);
+    cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--dark);
+    margin-top: 5px;
 }
 
 /* Button */
@@ -120,10 +154,22 @@ input:focus {
     transition: all 0.5s;
 }
 
+.init {
+    gap: 3em;
+}
+
+.init_description {
+    width: 60%;
+}
+
 /* Main container */
 .main {
     margin-top: 3em;
     flex-direction: column
+}
+
+.main>section {
+    margin-bottom: 2em;
 }
 
 .init div p,
@@ -141,10 +187,6 @@ input:focus {
     gap: 3em;
 }
 
-.description {
-    margin-left: 12em;
-}
-
 .description span,
 .description p {
     font-size: 1.2em;
@@ -152,15 +194,15 @@ input:focus {
 
 /* images */
 .lottie_img {
-    width: 52em;
+    width: 40vw;
 }
 
 .logo_about {
-    width: 30em;
+    width: 31vw;
 }
 
 .register_img {
-    width: 30em;
+    width: 31vw;
 }
 
 .logo_footer {
@@ -169,6 +211,16 @@ input:focus {
 
 .cube_img {
     width: 20em;
+}
+
+.about {
+    width: 85%;
+    padding: 5em;
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    column-gap: 8em;
 }
 
 .challenge {
@@ -184,6 +236,8 @@ input:focus {
     display: flex;
     justify-content: space-between;
     width: 85%;
+    align-items: center;
+    gap: 1em;
 }
 
 .hour_title {
@@ -195,9 +249,10 @@ input:focus {
     align-items: center;
     justify-content: space-between;
     gap: 3em;
+    flex-wrap: wrap;
 }
 
-.countdown > div {
+.countdown>div {
     background-color: var(--white);
     border-radius: 16px;
     width: 6em;
@@ -210,14 +265,14 @@ input:focus {
     margin-top: 1em;
 }
 
-.countdown div > div {
+.countdown div>div {
     font-weight: 600;
     text-align: center;
     font-size: 2.5em;
     margin-top: 0.1em;
 }
 
-.awards_container{
+.awards_container {
     padding: 2em 0;
     flex-direction: column;
 }
@@ -227,6 +282,7 @@ input:focus {
     align-items: baseline;
     justify-content: space-around;
     gap: 12em;
+    padding: 2em;
 }
 
 .awards div {
@@ -252,6 +308,7 @@ input:focus {
     display: flex;
     flex-direction: column;
     gap: 2em;
+    margin-top: 1em;
 }
 
 .register_form {
@@ -259,37 +316,165 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.btn_res {
+    margin-top: 2em;
 }
 
 /* Footer */
 .footer {
-    padding: 1em 0;
+    padding: 2em 0;
     background-color: var(--gray);
     color: var(--white);
     flex-direction: column;
+    width: 100%;
 }
 
 .footer_links {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 85%;
 }
 
-@media (max-width: 600px) {
-    
-    .lottie_img,
+.footer_link {
+    border-radius: 100%;
+    padding: 0.8em;
+}
+
+.link_whatsapp:hover {
+    background-color: #27CA37;
+    transition: all 0.4s ease;
+    animation: 0.8s linear;
+}
+
+.link_instagram:hover {
+    background-color: #D84177;
+    transition: all 0.4s ease;
+    animation: 0.8s linear;
+}
+
+.link_mail:hover {
+    background-color: #C60F0F;
+    transition: all 0.4s ease;
+    animation: 0.8s linear;
+}
+
+.footer>p {
+    margin-top: 2em;
+}
+
+/* Dispositivos menores */
+@media screen and (max-width: 930px) {
     .register_img {
-        visibility: hidden;
         display: none;
+    }
+
+    .awards {
+        flex-wrap: wrap;
     }
 }
 
-#about {
-    width: 85%;
-    padding: 5em;
-    display: flex;
-    align-items: center;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
+@media screen and (max-width: 768px) {
+    input {
+        width: 28em;
+    }
+    select {
+        width: 30em;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 10;
+        border-top: 3px solid var(--dark);
+    }
+
+    .navbar.active .hamburger {
+        display: block;
+        z-index: 1;
+        border-top: 3px solid var(--white);
+    }
+
+    .navbar.active .hamburger::before,
+    .navbar.active .hamburger::after {
+        background-color: var(--white);
+    }
+    
+    .navbar.active .navbar_links {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .navbar.active .navbar_links .navbar_link {
+        color: var(--white);
+    }
+
+    .navbar_links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--dark);
+        clip-path: circle(30px at 90% -15%);
+        transition: 1s ease-in-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .logo_about,
+    .cube_img {
+        display: none;
+    }
+
+    .footer_links {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social_media_links {
+        flex-wrap: wrap;
+    }
+
+    .about,
+    /* .awards, */
+    .hour_container,
+    .footer {
+        flex-wrap: wrap;
+    }
+}
+
+/* Celulares */
+@media screen and (max-width: 600px) {
+    input {
+        width: 24em;
+    }
+    select {
+        width: 26em;
+    }
+
+    .init {
+        flex-wrap: wrap-reverse;
+    }
+
+    .about {
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .description {
+        margin: 0;
+    }
+
+    .logo_footer {
+        width: 20em;
+    }
 }

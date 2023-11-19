@@ -5,6 +5,7 @@ let hoursDisplay = document.getElementById("hours")
 let minutesDisplay = document.getElementById("minutes")
 let secondsDisplay = document.getElementById("seconds")
 
+// let countDownDate = new Date("Oct 04, 2023 10:00:00").getTime();
 let countDownDate = new Date("Dec 10, 2023 10:00:00").getTime();
 
 // Atualiza countDown a cada 1 segundo
@@ -25,8 +26,10 @@ const time = setInterval(() => {
 
     if (distance < 0) {
         clearInterval(time);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+        // document.getElementById("hour").innerHTML = "EXPIRED";
+        daysDisplay.innerHTML = 0
+        hoursDisplay.innerHTML = 0
+        minutesDisplay.innerHTML = 0
+        secondsDisplay.innerHTML = 0
     }
-
-    console.log(days)
 }, 1000)

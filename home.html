@@ -16,19 +16,29 @@
 
     <body>
         <header class="header">
-            <nav class="navbar">
+            <nav id="navbar" class="navbar">
                 <a href="/home.html">
                     <img src="img/logo_dark.svg" alt="Logo da competição" class="logo_header">
                 </a>
 
-                <div class="navbar_links">
-                    <a href="/home.html" class="navbar_link">Home</a>
-                    <a href="/home.html#about" class="navbar_link">Sobre</a>
-                </div>
+                <button class="hamburger"></button>
 
-                <a href="/home.html#register" class="navbar_link">
-                    Inscreva-se
-                </a>
+                <ul class="navbar_links">
+                    <li>
+                        <a href="/home.html" class="navbar_link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="/home.html#about" class="navbar_link">Sobre</a>
+                    </li>
+
+                    <li>
+                        <a href="/home.html#register" class="navbar_link">
+                            Inscreva-se
+                        </a>
+                    </li>
+                </ul>
+
             </nav>
         </header>
 
@@ -42,11 +52,12 @@
                         perfeito para você.</p>
                 </article>
 
-                <img src="img/person_games.svg" alt="Personagens jogando" class="lottie_img">
+                <!-- <img src="img/person_games.svg" alt="Personagens jogando" class="lottie_img"> -->
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/49075871-bd6c-4f27-a35e-c7cf483da265/bd6FTeFBvd.json" background="#fff" speed="1" loop autoplay direction="1" mode="normal" class="lottie_img"></lottie-player>
             </section>
 
             <section class="container_bg_color">
-                <article id="about" class="container">
+                <article id="about" class="container about">
                     <img src="img/logo_dark.svg" alt="Logo da competição" class="logo_about">
                     <div class="description">
                         <h1>Sobre o evento</h1>
@@ -89,7 +100,7 @@
                     </div>
                 </div>
 
-                <div class="container">
+                <div class="container ">
                     <article>
                         <h1>Desafios</h1>
                         <p>Competiremos em uma variedade de jogos de raciocínio populares, incluindo enigmas e desafios
@@ -135,12 +146,12 @@
                     <fieldset class="fields">
                         <div>
                             <label for="name">Nome:</label>
-                            <input type="text" placeholder="Digite seu nome" name="name">
+                            <input type="text" placeholder="Digite seu nome" name="name" id="name">
                         </div>
 
                         <div>
                             <label for="email">E-mail:</label>
-                            <input type="email" placeholder="Digite seu e-mail" name="email">
+                            <input type="email" placeholder="Digite seu e-mail" name="email" id="email">
                         </div>
 
                         <div>
@@ -149,16 +160,17 @@
                                 <option value="" disabled selected>Selecione uma opção</option>
                                 <option value="Candy Crush Saga">Candy Crush Saga</option>
                                 <option value="Sudoku">Sudoku</option>
+                                <option value="Brain Out">Brain Out</option>
                             </select>
                         </div>
 
                         <div>
                             <label for="password">Senha:</label>
-                            <input type="password" placeholder="Digite sua senha" name="password">
+                            <input type="password" placeholder="Digite sua senha" name="password" id="password">
                         </div>
                     </fieldset>
 
-                    <button class="btn">
+                    <button class="btn btn_res">
                         Inscrever-se
                     </button>
                 </form>
@@ -169,14 +181,27 @@
 
         <footer class="container footer">
             <div class="footer_links">
-                <a href="home.html">
+                <a href="home.html" class="logo_link">
                     <img src="img/logo_white.svg" alt="Logo da competição" class="logo_footer">
                 </a>
 
-                <div>
+                <div class="social_media_links container">
                     <a href="">
-                        <img src="img/whatsapp_logo.svg" alt="Logo do WhatsApp"
-                            style="background-color: green; border-radius: 10px; padding: 10px;">
+                        <div class="footer_link link_whatsapp">
+                            <img src="img/whatsapp_logo.svg" alt="Logo do WhatsApp">
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/">
+                        <div class="footer_link link_instagram">
+                            <img src="img/instagram_logo.svg" alt="Logo do Instagram">
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="footer_link link_mail">
+                            <img src="img/mail_logo.svg" alt="Ícone de e-mail">
+                        </div>
                     </a>
                 </div>
             </div>
@@ -184,6 +209,7 @@
             <p>Copyright © Todos os direitos reservados</p>
         </footer>
 
+        <script src="js/navbar.js"></script>
         <script src="js/countdown.js"></script>
     </body>
 
