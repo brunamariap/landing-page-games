@@ -187,6 +187,8 @@ select option:checked {
     gap: 3em;
 }
 
+.challenge .container article p,
+.init_description p,
 .description span,
 .description p {
     font-size: 1.2em;
@@ -202,7 +204,7 @@ select option:checked {
 }
 
 .register_img {
-    width: 31vw;
+    width: 42vw;
 }
 
 .logo_footer {
@@ -343,6 +345,7 @@ select option:checked {
 .footer_link {
     border-radius: 100%;
     padding: 0.8em;
+    border: 2px solid var(--white);
 }
 
 .link_whatsapp:hover {
