@@ -21,11 +21,7 @@ A **Mind Masters Challenge** é uma landing page desenvolvida para promover um c
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/mind-masters-challenge.git
-   ```
-2. Acesse a pasta do projeto:
-   ```bash
-   cd mind-masters-challenge
+   git clone https://github.com/brunamariap/landing-page-games.git
    ```
 
 ## Contribuição
